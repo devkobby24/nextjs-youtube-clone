@@ -7,7 +7,8 @@ const VideoList = ({ videos, onVideoSelect }) => {
   ));
 
   return (
-    <div className="mt-10">
+    
+    videos&&<div className="mt-10">
       <h2 className="font-bold text-2xl">Suggested Videos</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
         {listOfVideos}

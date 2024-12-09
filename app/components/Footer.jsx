@@ -9,21 +9,21 @@ const Footer = () => {
             target="_blank"
             className="hover:text-gray-400 transition"
           >
-            <Mail size={24} />
+            <Mail size={30} />
           </a>
           <a
             href="https://twitter.com/kay_dev24"
             target="_blank"
             className="hover:text-gray-400 transition"
           >
-            <Twitter size={24} />
+            <Twitter size={30} />
           </a>
           <a
             href="https://www.linkedin.com/in/justice-duah-7ab6b4239/"
             target="_blank"
             className="hover:text-gray-400 transition"
           >
-            <Linkedin size={24} />
+            <Linkedin size={30} />
           </a>
         </div>
       );

@@ -36,7 +36,7 @@ const App = () => {
   return (
     <>
     <Header />
-    <div className="flex flex-col justify-center items-center gap-4 p-5 lg:mx-40">
+    <div className="flex flex-col justify-center items-center gap-4 p-5 lg:mx-40 min-h-[90vh]">
       <div>
         <SearchBar onFormSubmit={handleSubmit} />
       </div>

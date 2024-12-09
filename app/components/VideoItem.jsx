@@ -11,14 +11,14 @@ const VideoItem = ({ video, onVideoSelect }) => {
       >
         <Image
           alt="thumbnail"
-          src={video?.snippet?.thumbnails?.medium.url}
-          className="rounded-t-lg md:w-[400px] w-full h-[200px] object-fit"
-          height={400}
-          width={200}
+          src={video?.snippet?.thumbnails?.high.url}
+          className="rounded-t-lg md:w-[400px] w-full h-auto object-cover"
+          height={200}
+          width={400}
         />
         <CardContent className="p-0">
-          <CardHeader>
-            <CardTitle className="text-base font-semibold">
+          <CardHeader className="p-3">
+            <CardTitle className="text-base font-semibold p-0">
               {video?.snippet?.title}
             </CardTitle>
           </CardHeader>
