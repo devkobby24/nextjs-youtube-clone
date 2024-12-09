@@ -5,6 +5,7 @@ import VideoList from "./components/VideoList";
 import VideoDetail from "./components/VideoDetails";
 import youtube from "./api/youtube";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -48,6 +49,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    <Footer />
     </>
   );
 };
