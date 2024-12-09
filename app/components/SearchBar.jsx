@@ -16,7 +16,7 @@ const SearchBar = ({ onFormSubmit }) => {
   };
 
   return (
-    <div className="w-[390px] md:w-full flex p-2 md:p-4 items-center justify-center border-2 border-gray-300 rounded-lg">
+    <div className="w-[390px] md:w-full flex p-2 md:p-4 items-center justify-center rounded-lg">
       <form
         onSubmit={handleSubmit}
         className="md:w-[850px] w-full flex items-center justify-center gap-3"

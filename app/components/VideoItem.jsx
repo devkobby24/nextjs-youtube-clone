@@ -17,10 +17,11 @@ const VideoItem = ({ video, onVideoSelect }) => {
           width={400}
         />
         <CardContent className="p-0">
-          <CardHeader className="p-3">
-            <CardTitle className="text-base font-semibold p-0">
-              {video?.snippet?.title}
+          <CardHeader className="py-3 ml-0">
+            <CardTitle className="text-base flex font-semibold p-0">
+              <span>{video?.snippet?.title}<span className="text-gray-500"> - {video?.snippet?.channelTitle}</span></span>
             </CardTitle>
+            
           </CardHeader>
         </CardContent>
       </Card>

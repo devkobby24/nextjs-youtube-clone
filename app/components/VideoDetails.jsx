@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 
 const VideoDetail = ({ video }) => {
-  if (!video) return <p className="text-lg text-center">Key in your search term to view the videos</p>;
+  if (!video) return <p className="text-xl text-center">Key in your search term to view the videos</p>;
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
