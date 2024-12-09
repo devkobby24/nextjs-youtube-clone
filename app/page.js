@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
 import VideoDetail from "./components/VideoDetails";
 import youtube from "./api/youtube";
+import Header from "./components/Header";
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -32,6 +33,8 @@ const App = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className="flex flex-col justify-center items-center gap-4 p-5 lg:mx-40">
       <div>
         <SearchBar onFormSubmit={handleSubmit} />
@@ -45,6 +48,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
