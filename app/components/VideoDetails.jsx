@@ -7,21 +7,17 @@ const VideoDetail = ({ video }) => {
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
-    <>
-      {/* Video Player */}
-      <Card className="h-[70%]">
-        <iframe
-          className="w-full h-full"
+    <div>
+      {/* Video Details */}
+      <Card className=" mt-4 shadow-md">
+      <iframe
+          className="rounded-t-lg w-full h-[400px] md:h-[500px] object-cover"
           title="Video Player"
           src={videoSrc}
         />
-      </Card>
-
-      {/* Video Details */}
-      <Card className="p-4 mt-4 shadow-md">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold italic">
-            {video?.snippet?.title} - {video?.snippet?.channelTitle}
+          <CardTitle className="text-2xl font-bold">
+            {video?.snippet?.title}
           </CardTitle>
           <CardDescription className="text-gray-500">
             {video?.snippet?.channelTitle}
@@ -31,7 +27,7 @@ const VideoDetail = ({ video }) => {
           <p className="text-base">{video?.snippet?.description}</p>
         </CardContent>
       </Card>
-    </>
+    </div>
   );
 };
 

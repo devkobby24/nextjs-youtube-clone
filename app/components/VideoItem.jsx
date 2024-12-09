@@ -4,19 +4,19 @@ import Image from "next/image"; // You can use your custom Image component
 
 const VideoItem = ({ video, onVideoSelect }) => {
   return (
-    <div className="mb-10">
+    <div>
       <Card
-        className="cursor-pointer flex items-center shadow-md hover:shadow-lg"
+        className="cursor-pointer flex flex-col items-center shadow-lg hover:shadow-lg"
         onClick={() => onVideoSelect(video)}
       >
         <Image
           alt="thumbnail"
           src={video?.snippet?.thumbnails?.medium.url}
-          className="mr-5 w-32 h-20 object-cover"
-          height={80}
-          width={128}
+          className="rounded-t-lg md:w-[400px] w-full h-[200px] object-fit"
+          height={400}
+          width={200}
         />
-        <CardContent className="p-3">
+        <CardContent className="">
           <CardHeader>
             <CardTitle className="text-base font-semibold">
               {video?.snippet?.title}

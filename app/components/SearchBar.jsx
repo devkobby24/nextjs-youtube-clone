@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
@@ -17,19 +16,26 @@ const SearchBar = ({ onFormSubmit }) => {
   };
 
   return (
-    <Card className="p-6 w-[600px] mx-auto my-10 rounded-lg shadow-md">
-      <CardContent>
-        <form onSubmit={handleSubmit}>
-          <Textarea
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleChange}
-            className="w-full"
-          />
-          <Button type="submit" className="mt-4">Search</Button>
-        </form>
-      </CardContent>
-    </Card>
+    <div className="w-full flex p-4 items-center justify-center border-2 border-gray-300 rounded-lg">
+      <form
+        onSubmit={handleSubmit}
+        className="md:w-[850px] w-full flex items-center justify-center gap-5"
+      >
+        <Textarea
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleChange}
+          className="w-full h-12 border-2 border-gray-400 rounded-lg"
+        />
+        <Button
+          type="submit"
+          variant="outline"
+          className="h-14 rounded-lg border-2 border-gray-400"
+        >
+          Search
+        </Button>
+      </form>
+    </div>
   );
 };
 
