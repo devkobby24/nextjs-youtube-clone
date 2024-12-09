@@ -18,12 +18,12 @@ const App = () => {
       const response = await youtube.get("search", {
         params: {
           part: "snippet",
-          maxResults: 5,
+          maxResults: 6,
           key: process.env.NEXT_PUBLIC_YOUTUBE_API_KEY, // Secure the API key
           q: searchTerm,
         },
       });
-
+      console.log(response.data.items);
       setVideos(response.data.items);
       setSelectedVideo(response.data.items[0]);
     } catch (error) {
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-4 p-5">
+    <div className="flex flex-col justify-center items-center gap-4 p-5 lg:mx-40">
       <div>
         <SearchBar onFormSubmit={handleSubmit} />
       </div>

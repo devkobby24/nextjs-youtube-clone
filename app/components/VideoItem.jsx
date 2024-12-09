@@ -6,7 +6,7 @@ const VideoItem = ({ video, onVideoSelect }) => {
   return (
     <div>
       <Card
-        className="cursor-pointer flex flex-col items-center shadow-lg hover:shadow-lg"
+        className="cursor-pointer flex flex-col items-center shadow-md hover:shadow-xl max-w-[400px]"
         onClick={() => onVideoSelect(video)}
       >
         <Image
@@ -16,7 +16,7 @@ const VideoItem = ({ video, onVideoSelect }) => {
           height={400}
           width={200}
         />
-        <CardContent className="">
+        <CardContent className="p-0">
           <CardHeader>
             <CardTitle className="text-base font-semibold">
               {video?.snippet?.title}

@@ -16,21 +16,23 @@ const SearchBar = ({ onFormSubmit }) => {
   };
 
   return (
-    <div className="w-full flex p-4 items-center justify-center border-2 border-gray-300 rounded-lg">
+    <div className="w-[390px] md:w-full flex p-2 md:p-4 items-center justify-center border-2 border-gray-300 rounded-lg">
       <form
         onSubmit={handleSubmit}
-        className="md:w-[850px] w-full flex items-center justify-center gap-5"
+        className="md:w-[850px] w-full flex items-center justify-center gap-3"
       >
-        <Textarea
+        <textarea
           placeholder="Search..."
           value={searchTerm}
+          required
+          rows={1}
           onChange={handleChange}
-          className="w-full h-12 border-2 border-gray-400 rounded-lg"
+          className="w-full p-2 h-10 text-start border-2 border-gray-400 rounded-xl"
         />
         <Button
           type="submit"
           variant="outline"
-          className="h-14 rounded-lg border-2 border-gray-400"
+          className=" rounded-xl border-2 border-gray-500 bg-gray-400"
         >
           Search
         </Button>
