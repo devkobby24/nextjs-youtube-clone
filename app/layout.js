@@ -1,5 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -13,11 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-       className={`${outfit.className}`}
-      >
-        {children}
-      </body>
+      <CSPostHogProvider>
+        <body className={`${outfit.className}`}>{children}</body>
+      </CSPostHogProvider>
     </html>
   );
 }
